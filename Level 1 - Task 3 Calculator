@@ -1,0 +1,153 @@
+Calculator :-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 8px;
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .display {
+            grid-column: span 4;
+            background-color: #ffd700;
+            padding: 10px;
+            font-size: 1.5em;
+            color: #333;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff69b4;
+            color: #fff;
+        }
+
+        .number {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        .operator {
+            background-color: #f44336;
+            color: #fff;
+        }
+
+        .equals {
+            grid-column: span 2;
+            background-color: #ff9800;
+            color: #fff;
+        }
+    </style>
+    <title>Rainbow Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <button class="number" onclick="clearDisplay()">C</button>
+        <button class="number" onclick="appendCharacter('7')">7</button>
+        <button class="number" onclick="appendCharacter('8')">8</button>
+        <button class="number" onclick="appendCharacter('9')">9</button>
+        <button class="operator" onclick="setOperator('/')">/</button>
+        <button class="number" onclick="appendCharacter('4')">4</button>
+        <button class="number" onclick="appendCharacter('5')">5</button>
+        <button class="number" onclick="appendCharacter('6')">6</button>
+        <button class="operator" onclick="setOperator('*')">*</button>
+        <button class="number" onclick="appendCharacter('1')">1</button>
+        <button class="number" onclick="appendCharacter('2')">2</button>
+        <button class="number" onclick="appendCharacter('3')">3</button>
+        <button class="operator" onclick="setOperator('-')">-</button>
+        <button class="number" onclick="appendCharacter('0')">0</button>
+        <button class="equals" onclick="calculateResult()">=</button>
+        <button class="operator" onclick="setOperator('+')">+</button>
+    </div>
+    <script>
+        let displayValue = '0';
+        let operator = '';
+        let operand = '';
+
+        function updateDisplay() {
+            document.getElementById('display').innerText = displayValue;
+        }
+
+        function clearDisplay() {
+            displayValue = '0';
+            operator = '';
+            operand = '';
+            updateDisplay();
+        }
+
+        function appendCharacter(char) {
+            if (displayValue === '0' || operator !== '') {
+                displayValue = char;
+                operator = '';
+            } else {
+                displayValue += char;
+            }
+            updateDisplay();
+        }
+
+        function setOperator(newOperator) {
+            if (operator !== '') {
+                calculateResult();
+            }
+            operator = newOperator;
+            operand = displayValue;
+            displayValue = '0';
+            updateDisplay();
+        }
+
+        function calculateResult() {
+            if (operator !== '' && operand !== '') {
+                switch (operator) {
+                    case '+':
+                        displayValue = String(parseFloat(operand) + parseFloat(displayValue));
+                        break;
+                    case '-':
+                        displayValue = String(parseFloat(operand) - parseFloat(displayValue));
+                        break;
+                    case '*':
+                        displayValue = String(parseFloat(operand) * parseFloat(displayValue));
+                        break;
+                    case '/':
+                        displayValue = String(parseFloat(operand) / parseFloat(displayValue));
+                        break;
+                }
+                operator = '';
+                operand = '';
+                updateDisplay();
+            }
+        }
+
+        updateDisplay();
+    </script>
+</body>
+</html>
