@@ -10,7 +10,6 @@ Landing Page:-
   font-family: 'Helvetica', sans-serif;
 }
 
-/* Header styles */
 header {
   background-color: #444;
   color: #eee;
