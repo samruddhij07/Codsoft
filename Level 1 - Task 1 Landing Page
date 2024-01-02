@@ -1,0 +1,103 @@
+Landing Page:-
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style> 
+    body {
+  font-family: 'Helvetica', sans-serif;
+}
+
+/* Header styles */
+header {
+  background-color: #444;
+  color: #eee;
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 15px;
+}
+
+nav a {
+  text-decoration: underline;
+  color: #eee;
+}
+
+/* Hero section styles */
+.hero {
+  background-image: url("C:\Users\admin'\Desktop\Samruddhi\College\Internship\Codsoft");
+  background-size: contain;
+  text-align: center;
+  padding: 120px 0;
+  color: #000;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #009688;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+  background-color: #444;
+  color: #eee;
+  text-align: center;
+  padding: 15px 0;
+}
+    </style>
+    <title>Samruddhi's Amazing Landing Page</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to CodSoft Internship</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Start</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Invest</a></li>
+          <li><a href="#">Connect</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Experience the Wonders of Our Product</h2>
+      <p>Uncover incredible features that will transform your world!</p>
+      <a href="#" class="cta-button">Begin Your Journey</a>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2023 Your Company. All rights reserved.<br />
+        Founder: Samruddhi Jadhav <br />
+        Web Development Internship (Level 1:Task 1)
+      </p>
+    </footer>
+  </body>
+</html>
