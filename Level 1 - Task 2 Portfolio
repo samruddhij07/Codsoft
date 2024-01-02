@@ -1,0 +1,133 @@
+Portfolio :-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 40px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+    <title>My Creative Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Samruddhi Jadhav</h1>
+        <p>Web Developer</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="data:image/jpeg;base64,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" alt="Samruddhi Jadhav">
+        <p>A passionate web developer with experience in creating visually stunning and user-friendly websites. I love turning ideas into reality using code.</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React.js</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Graphic Design</div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1.</p>
+            <img src="https://tse4.mm.bing.net/th/id/OIP.nO9tkygGh_VuIaRVMhSB8gHaHa?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Project 1">
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2.</p>
+            <img src="https://tse1.mm.bing.net/th/id/OIP.5U7VOh6HOmGBNMQU7rLuzAHaHa?pid=ImgDet&w=206&h=206&c=7&dpr=1.3" alt="Project 2">
+        </div>
+    </section>
+
+    <section id="resume" class="resume">
+        <h2>Resume</h2>
+        <p>Download my <a href="https://www.canva.com/design/DAF29v-tooQ/YatBe9pJ6_q7nopUf90WWA/edit?utm_content=DAF29v-tooQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">resume</a>.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: samja123@gmail.com</p>
+        <p>Phone: 1234567890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Samruddhi Jadhav. All rights reserved.</p>
+    </footer>
+</body>
+</html>
